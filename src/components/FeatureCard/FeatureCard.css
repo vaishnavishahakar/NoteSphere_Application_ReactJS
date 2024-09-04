@@ -16,3 +16,15 @@
 .feature-text{
    font-size: 12px;
 }
+
+@media screen and (max-width: 500px) {
+    .feature-card{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .feature-img{
+        height: 35px;
+        display: block;
+        margin: 10px auto;
+    }
+}

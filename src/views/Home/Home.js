@@ -23,7 +23,7 @@ const FEATURES = [
 function home() {
   return (
     <div>
-      <h1 className='text-center text-primary'>NoteSphere 📝🌐</h1>
+      <h1 className='text-center text-primary app-title'>NoteSphere 📝🌐</h1>
       <p className='text-center text-secondary'>
         "Your All-in-One Hub for Effortless Note Management!!"
       </p>
@@ -37,7 +37,7 @@ function home() {
             const {featureImg, featureText} = feature;
             return (
               <FeatureCard 
-                featureImg={ImgSecure}
+                featureImg={featureImg}
                 featureText={featureText}
               />
             );
