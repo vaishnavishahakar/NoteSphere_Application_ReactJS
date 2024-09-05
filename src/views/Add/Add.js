@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Add.css";
 import HomeButton from "./../../components/HomeButton/HomeButton";
 import EmojiPicker from "emoji-picker-react";
+import toast from 'react-hot-toast';
 
 function Add() {
   const [title, setTitle] = useState("");
@@ -9,6 +10,24 @@ function Add() {
   const [category, setCategory] = useState("");
   const [emoji, setEmoji] = useState("");
   const [openEmojiDialog, setOpenEmojiDialog] = useState(false);
+
+  const addNote = () => {
+    const notes = JSON.parse(localStorage.getItem('notes')) || [];
+
+    const noteObject = {
+      title,
+      description,
+      category,
+      emoji,
+    };
+    notes.push(noteObject);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    toast.success("Note added successfully!");
+    setTitle("");
+    setDescription("");
+    setCategory("");
+    setEmoji("");
+  };
 
   return (
     <div>
@@ -59,9 +78,8 @@ function Add() {
 
       <EmojiPicker 
       open={openEmojiDialog} 
-      height={"300px"} 
-      width={"400px"}
-      searchDisabled={true}
+      // height={"300px"} 
+      // width={"400px"}
       skinTonesDisabled={true}
       onEmojiClick={(emojiObject)=>{
         setEmoji(emojiObject.emoji)
@@ -77,12 +95,7 @@ function Add() {
       <button
         type="button"
         className="btn btn-primary add-note-button"
-        onClick={() => {
-         console.log("Title", title);
-         console.log("Description", description);
-         console.log("Category", category);
-         console.log("Emoji", emoji);
-        }}
+        onClick={addNote}
       >
        ✙ Add Note
       </button>
