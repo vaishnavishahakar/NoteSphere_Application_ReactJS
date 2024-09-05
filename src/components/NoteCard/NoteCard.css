@@ -1,0 +1,68 @@
+.note-card{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.note-card-emoji{
+    font-size: 40px;
+    margin-right: 40px;
+}
+
+.note-card-title{
+    margin: 0;
+}
+
+.note-card-description{
+    margin: 0;
+}
+
+.note-card-category{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.note-category-emoji{
+    font-size: 15px;
+    margin-right: 5px;
+}
+   
+.bg-shopping{
+    background-color: #BBE9FF;
+}
+.bg-to-do{
+    background-color: #EF9F9F;
+}
+.bg-work{
+    background-color: #FFBF78;
+}
+.bg-meetings{
+    background-color: #D6DAC8;
+}
+.bg-personal{
+    background-color: #F6FB7A;
+}
+.bg-learning{
+    background-color: #DCBFFF;
+}
+.bg-healthfitness{
+    background-color: #FCDDB0;
+}
+.bg-travel{
+    background-color: #E8C5E5;
+}
+.bg-finance{
+    background-color: #BFD8AF;
+}

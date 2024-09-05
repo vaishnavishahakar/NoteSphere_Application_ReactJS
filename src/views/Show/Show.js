@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Show.css';
 import HomeButton from './../../components/HomeButton/HomeButton';
+import NoteCard from '../../components/NoteCard/NoteCard';
 
+function Show() {
+  const [notes, setNotes] = useState([]);
 
-function show() {
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+    setNotes(savedNotes);
+  }, []);
+
   return (
     <div>
     <h1 className='text-center text-primary'>📖 Show Notes</h1>
-
+    
+    <div className='notes-container'>
+    {
+      notes.map((note)=>{
+        const {title, description, category, emoji} = note;
+        return(
+          <NoteCard 
+            title={title}
+            description={description}
+            category={category}
+            emoji={emoji}
+          />
+        )
+      })
+    }
+    </div>
     <HomeButton/>
   </div>
   );
 }
 
-export default show;
+export default Show;
