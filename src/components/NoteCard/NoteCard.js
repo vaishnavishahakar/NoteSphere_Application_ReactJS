@@ -1,8 +1,16 @@
 import React from 'react';
 import './NoteCard.css';
+import IconDelete from "./delete.png"
 
 function titleCase(str){
     return str[0].toUpperCase() + str.slice(1);
+}
+
+function deleteNote (index) {
+    const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+    savedNotes.splice(index, 1);
+    localStorage.setItem("notes", JSON.stringify(savedNotes));
+    window.location.reload();
 }
 
 function NoteCategory({category}){
@@ -27,7 +35,7 @@ const CATEGORY_EMOJIS = {
     )
 }
 
-function NoteCard({title, description, category, emoji}) {
+function NoteCard({index, title, description, category, emoji}) {
   return (
     <div className='note-card'>
         <div className='note-card-emoji'>
@@ -37,6 +45,10 @@ function NoteCard({title, description, category, emoji}) {
             <h3 className='note-card-title'>{title}</h3>
             <p className='note-card-description'>{description}</p>
             <NoteCategory category={category} />
+
+            <img src={IconDelete} className='note-card-delete' alt='Delete' 
+            onClick={()=>{deleteNote(index);
+            }}/>
         </div>
     </div>
   );
