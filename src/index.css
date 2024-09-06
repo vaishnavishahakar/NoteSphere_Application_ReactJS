@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 20px 50px;
-  background-color: #F5E8C7;
+  background-color: #F5F5F5;
 }
 
 .text-center{
@@ -9,11 +9,11 @@ body {
 }
 
 .text-primary{
-  color: #6F4C5B;
+  color: #2E2E2E;
 }
 
 .text-secondary{
-  color: #9E7777;
+  color: #606060;
 }
 
 .btn{
@@ -27,13 +27,19 @@ body {
 }
 
 .btn-primary{
-  background-color: #DEBA9D;
-  color: #6F4C5B;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+.btn-primary:hover{
+  background-color: #45A049;
 }
 
 .btn-secondary{
-  background-color: #9E7777;
-  color: #F5E8C7;
+  background-color: #2196F3;
+  color: #FFFFFF;
+}
+.btn-secondary:hover{
+  background-color: #1976D2;
 }
 
 @media screen and (max-width: 500px) {

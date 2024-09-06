@@ -31,7 +31,7 @@ function Add() {
 
   return (
     <div>
-      <h1 className="text-center text-primary">✍️ Add Notes</h1>
+      <h1 className="text-center text-primary" style={{marginBottom: "50px"}}>✍️ Add Notes</h1>
 
       <input
         type="text"

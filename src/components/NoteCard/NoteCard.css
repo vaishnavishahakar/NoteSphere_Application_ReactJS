@@ -103,4 +103,8 @@
     .note-category-emoji{
         font-size: 12px;
     }
+    .note-card-delete{
+        height: 20px;
+        right: 15px;
+    }
 }
