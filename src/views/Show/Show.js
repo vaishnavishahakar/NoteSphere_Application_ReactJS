@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Show.css';
-import HomeButton from './../../components/HomeButton/HomeButton';
+import HomeButton from '../../components/HomeButton/HomeButton';
 import NoteCard from '../../components/NoteCard/NoteCard';
 
 function Show() {

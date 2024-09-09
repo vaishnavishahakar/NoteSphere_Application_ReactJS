@@ -3,6 +3,9 @@ import './NoteCard.css';
 import IconDelete from "./delete.png"
 
 function titleCase(str){
+    if(str.length===0 ){
+        return 
+    }
     return str[0].toUpperCase() + str.slice(1);
 }
 
